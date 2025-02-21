@@ -1,6 +1,6 @@
 {
   "name": "@fightmegg/riot-rate-limiter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Rate Limiter for Riot Games API",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

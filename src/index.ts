@@ -36,8 +36,8 @@ export class RiotRateLimiter {
     datastore: "local" | "ioredis";
   } = {
     debug: false,
-    concurrency: 1,
-    retryAfterDefault: 5000,
+    concurrency: 10,
+    retryAfterDefault: 10000,
     retryCount: 4,
     datastore: "local",
   };
