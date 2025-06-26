@@ -1,5 +1,5 @@
 {
-  "name": "@fightmegg/riot-rate-limiter",
+  "name": "lp-riot-rate-limiter",
   "version": "1.0.2",
   "description": "Rate Limiter for Riot Games API",
   "main": "dist/cjs/index.js",
@@ -23,38 +23,39 @@
     "riot games",
     "league of legends"
   ],
-  "author": "Ollie Jennings <ollie@fightme.gg>",
+  "author": "Chypriote <chypriote@lolpros.gg>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fightmegg/riot-rate-limiter/issues"
+    "url": "https://github.com/SpireGG/riot-rate-limiter/issues"
   },
-  "homepage": "https://github.com/fightmegg/riot-rate-limiter#readme",
+  "homepage": "https://github.com/SpireGG/riot-rate-limiter#readme",
   "dependencies": {
     "bottleneck": "^2.19.5",
-    "debug": "^4.4.0",
-    "ioredis": "^5.5.0",
+    "debug": "^4.4.1",
+    "ioredis": "^5.6.1",
     "node-fetch": "^2.7.0",
     "path-to-regexp": "^6.3.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.20.0",
+    "@eslint/js": "^9.29.0",
     "@fluffy-spoon/substitute": "^1.208.0",
     "@jest/types": "^29.6.3",
     "@types/debug": "^4.1.12",
     "@types/jest": "^29.5.14",
-    "@types/node": "^22.13.4",
+    "@types/node": "^22.15.33",
     "@types/node-fetch": "^2.6.12",
-    "eslint": "^9.20.1",
+    "eslint": "^9.29.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-prettier": "^5.5.1",
     "jest": "^29.7.0",
     "jest-extended": "^4.0.2",
     "jest-junit": "^16.0.0",
     "nock": "^13.5.6",
-    "prettier": "^3.5.1",
-    "ts-jest": "^29.2.5",
+    "prettier": "^3.6.1",
+    "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.3",
-    "typescript-eslint": "^8.24.1"
-  }
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.35.0"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
