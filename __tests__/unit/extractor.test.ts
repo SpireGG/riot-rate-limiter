@@ -7,7 +7,7 @@ describe("Extractor", () => {
     const toPath = compile(HOST, { encode: encodeURIComponent });
 
     test("it returns NULL if no region could be extracted", () => {
-      expect(extractRegion("http://fightme.gg")).toBeNull();
+      expect(extractRegion("http://lolpros.gg")).toBeNull();
     });
 
     test.each(Object.values(PlatformId))(
@@ -24,7 +24,7 @@ describe("Extractor", () => {
     const url = "https://euw.api.riotgames.com";
 
     test("it returns NULL if no method could be extracted", () => {
-      expect(extractMethod("http://fightme.gg/hello")).toBeNull();
+      expect(extractMethod("http://lolpros.gg/hello")).toBeNull();
     });
 
     test.each([
@@ -70,8 +70,8 @@ describe("Extractor", () => {
       ],
       // CLASH
       [
-        "CLASH.GET_PLAYERS_BY_SUMMONER",
-        METHODS.CLASH.GET_PLAYERS_BY_SUMMONER,
+        "CLASH.GET_PLAYERS_BY_PUUID",
+        METHODS.CLASH.GET_PLAYERS_BY_PUUID,
         { summonerId: "1234" },
       ],
       ["CLASH.GET_TEAM", METHODS.CLASH.GET_TEAM, { teamId: "1234" }],
@@ -99,8 +99,8 @@ describe("Extractor", () => {
         { queue: "RANKED_SOLO_5v5" },
       ],
       [
-        "LEAGUE.GET_ENTRIES_BY_SUMMONER",
-        METHODS.LEAGUE.GET_ENTRIES_BY_SUMMONER,
+        "LEAGUE.GET_ENTRIES_BY_PUUID",
+        METHODS.LEAGUE.GET_ENTRIES_BY_PUUID,
         { summonerId: "1234" },
       ],
       [
@@ -215,8 +215,8 @@ describe("Extractor", () => {
       ],
       // SPECTATOR
       [
-        "SPECTATOR.GET_GAME_BY_SUMMONER_ID",
-        METHODS.SPECTATOR.GET_GAME_BY_SUMMONER_ID,
+        "SPECTATOR.GET_GAME_BY_PUUID",
+        METHODS.SPECTATOR.GET_GAME_BY_PUUID,
         { summonerId: "1234" },
       ],
       [
@@ -293,11 +293,6 @@ describe("Extractor", () => {
       ],
       // TFT_SUMMONER
       [
-        "TFT_SUMMONER.GET_BY_ACCOUNT_ID",
-        METHODS.TFT_SUMMONER.GET_BY_ACCOUNT_ID,
-        { accountId: "1234" },
-      ],
-      [
         "TFT_SUMMONER.GET_BY_PUUID",
         METHODS.TFT_SUMMONER.GET_BY_PUUID,
         { puuid: "1234" },
@@ -306,11 +301,6 @@ describe("Extractor", () => {
         "TFT_SUMMONER.GET_BY_ACCESS_TOKEN",
         METHODS.TFT_SUMMONER.GET_BY_ACCESS_TOKEN,
         {},
-      ],
-      [
-        "TFT_SUMMONER.GET_BY_SUMMONER_ID",
-        METHODS.TFT_SUMMONER.GET_BY_SUMMONER_ID,
-        { summonerId: "1234" },
       ],
       // TOURNAMENT_STUB_V5
       [

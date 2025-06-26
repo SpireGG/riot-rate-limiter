@@ -85,7 +85,7 @@ export interface METHODS {
     GET_CHAMPION_ROTATIONS: string;
   };
   CLASH: {
-    GET_PLAYERS_BY_SUMMONER: string;
+    GET_PLAYERS_BY_PUUID: string;
     GET_TEAM: string;
     GET_TOURNAMENTS: string;
     GET_TOURNAMENT: string;
@@ -96,7 +96,7 @@ export interface METHODS {
   };
   LEAGUE: {
     GET_CHALLENGER_BY_QUEUE: string;
-    GET_ENTRIES_BY_SUMMONER: string;
+    GET_ENTRIES_BY_PUUID: string;
     GET_ALL_ENTRIES: string;
     GET_GRANDMASTER_BY_QUEUE: string;
     GET_LEAGUE_BY_ID: string;
@@ -140,19 +140,17 @@ export interface METHODS {
     GET_FEATURED_GAMES: string;
   };
   SPECTATOR: {
-    GET_GAME_BY_SUMMONER_ID: string;
+    GET_GAME_BY_PUUID: string;
     GET_FEATURED_GAMES: string;
   };
   SUMMONER: {
     GET_BY_RSO_PUUID: string;
-    GET_BY_ACCOUNT_ID: string;
     GET_BY_PUUID: string;
-    GET_BY_SUMMONER_ID: string;
     GET_BY_ACCESS_TOKEN: string;
   };
   TFT_LEAGUE: {
     GET_CHALLENGER: string;
-    GET_ENTRIES_BY_SUMMONER: string;
+    GET_ENTRIES_BY_PUUID: string;
     GET_ALL_ENTRIES: string;
     GET_GRANDMASTER: string;
     GET_LEAGUE_BY_ID: string;
@@ -167,10 +165,8 @@ export interface METHODS {
     GET_PLATFORM_DATA: string;
   };
   TFT_SUMMONER: {
-    GET_BY_ACCOUNT_ID: string;
     GET_BY_ACCESS_TOKEN: string;
     GET_BY_PUUID: string;
-    GET_BY_SUMMONER_ID: string;
   };
   TOURNAMENT_STUB_V5: {
     POST_CREATE_CODES: string;
@@ -226,7 +222,7 @@ export const METHODS = {
     GET_CHAMPION_ROTATIONS: "/lol/platform/v3/champion-rotations",
   },
   CLASH: {
-    GET_PLAYERS_BY_SUMMONER: "/lol/clash/v1/players/by-summoner/:summonerId",
+    GET_PLAYERS_BY_PUUID: "/lol/clash/v1/players/by-puuid/:puuid",
     GET_TEAM: "/lol/clash/v1/teams/:teamId",
     GET_TOURNAMENTS: "/lol/clash/v1/tournaments",
     GET_TOURNAMENT: "/lol/clash/v1/tournaments/:tournamentId",
@@ -237,7 +233,7 @@ export const METHODS = {
   },
   LEAGUE: {
     GET_CHALLENGER_BY_QUEUE: "/lol/league/v4/challengerleagues/by-queue/:queue",
-    GET_ENTRIES_BY_SUMMONER: "/lol/league/v4/entries/by-summoner/:summonerId",
+    GET_ENTRIES_BY_PUUID: "/lol/league/v4/entries/by-puuid/:puuid",
     GET_ALL_ENTRIES: "/lol/league/v4/entries/:queue/:tier/:division",
     GET_GRANDMASTER_BY_QUEUE:
       "/lol/league/v4/grandmasterleagues/by-queue/:queue",
@@ -284,20 +280,18 @@ export const METHODS = {
     GET_FEATURED_GAMES: "/lol/spectator/tft/v5/featured-games",
   },
   SPECTATOR: {
-    GET_GAME_BY_SUMMONER_ID:
-      "/lol/spectator/v5/active-games/by-summoner/:summonerId",
+    GET_GAME_BY_PUUID:
+      "/lol/spectator/v5/active-games/by-summoner/:puuid",
     GET_FEATURED_GAMES: "/lol/spectator/v5/featured-games",
   },
   SUMMONER: {
     GET_BY_RSO_PUUID: "/fulfillment/v1/summoners/by-puuid/:rsoPuuid",
-    GET_BY_ACCESS_TOKEN: "/lol/summoner/v4/summoners/me",
-    GET_BY_ACCOUNT_ID: "/lol/summoner/v4/summoners/by-account/:accountId",
     GET_BY_PUUID: "/lol/summoner/v4/summoners/by-puuid/:puuid",
-    GET_BY_SUMMONER_ID: "/lol/summoner/v4/summoners/:summonerId",
+    GET_BY_ACCESS_TOKEN: "/lol/summoner/v4/summoners/me",
   },
   TFT_LEAGUE: {
     GET_CHALLENGER: "/tft/league/v1/challenger",
-    GET_ENTRIES_BY_SUMMONER: "/tft/league/v1/entries/by-summoner/:summonerId",
+    GET_ENTRIES_BY_PUUID: "/tft/league/v1/entries/by-puuid/:puuid",
     GET_ALL_ENTRIES: "/tft/league/v1/entries/:tier/:division",
     GET_GRANDMASTER: "/tft/league/v1/grandmaster",
     GET_LEAGUE_BY_ID: "/tft/league/v1/leagues/:leagueId",
@@ -312,10 +306,8 @@ export const METHODS = {
     GET_PLATFORM_DATA: "/tft/status/v1/platform-data",
   },
   TFT_SUMMONER: {
-    GET_BY_ACCOUNT_ID: "/tft/summoner/v1/summoners/by-account/:accountId",
     GET_BY_PUUID: "/tft/summoner/v1/summoners/by-puuid/:puuid",
     GET_BY_ACCESS_TOKEN: "/tft/summoner/v1/summoners/me",
-    GET_BY_SUMMONER_ID: "/tft/summoner/v1/summoners/:summonerId",
   },
   TOURNAMENT_STUB_V5: {
     POST_CREATE_CODES: "/lol/tournament-stub/v5/codes",

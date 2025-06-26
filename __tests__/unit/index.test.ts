@@ -9,7 +9,7 @@ import {
 import nock from "nock";
 import Bottleneck from "bottleneck";
 
-describe("@fightmegg/riot-rate-limtier", () => {
+describe("lp-riot-rate-limtier", () => {
   describe.each([
     ["RiotRateLimiter", RiotRateLimiter, Object],
     ["extractRegion", extractRegion, Function],
