@@ -253,8 +253,8 @@ describe("Extractor", () => {
       // TFT LEAGUE
       ["TFT_LEAGUE.GET_CHALLENGER", METHODS.TFT_LEAGUE.GET_CHALLENGER, {}],
       [
-        "TFT_LEAGUE.GET_ENTRIES_BY_SUMMONER",
-        METHODS.TFT_LEAGUE.GET_ENTRIES_BY_SUMMONER,
+        "TFT_LEAGUE.GET_ENTRIES_BY_PUUID",
+        METHODS.TFT_LEAGUE.GET_ENTRIES_BY_PUUID,
         { summonerId: "1234" },
       ],
       [

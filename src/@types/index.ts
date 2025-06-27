@@ -205,18 +205,13 @@ export const METHODS = {
     GET_BY_PUUID: "/riot/account/v1/accounts/by-puuid/:puuid",
     GET_BY_RIOT_ID: "/riot/account/v1/accounts/by-riot-id/:gameName/:tagLine",
     GET_BY_ACCESS_TOKEN: "/riot/account/v1/accounts/me",
-    GET_ACTIVE_SHARD_FOR_PLAYER:
-      "/riot/account/v1/active-shards/by-game/:game/by-puuid/:puuid",
+    GET_ACTIVE_SHARD_FOR_PLAYER: "/riot/account/v1/active-shards/by-game/:game/by-puuid/:puuid",
   },
   CHAMPION_MASTERY: {
-    GET_ALL_CHAMPIONS:
-      "/lol/champion-mastery/v4/champion-masteries/by-puuid/:encryptedPUUID",
-    GET_CHAMPION_MASTERY:
-      "/lol/champion-mastery/v4/champion-masteries/by-puuid/:encryptedPUUID/by-champion/:championId",
-    GET_TOP_CHAMPIONS:
-      "/lol/champion-mastery/v4/champion-masteries/by-puuid/:encryptedPUUID/top",
-    GET_CHAMPION_MASTERY_SCORE:
-      "/lol/champion-mastery/v4/scores/by-puuid/:encryptedPUUID",
+    GET_ALL_CHAMPIONS: "/lol/champion-mastery/v4/champion-masteries/by-puuid/:puuid",
+    GET_CHAMPION_MASTERY: "/lol/champion-mastery/v4/champion-masteries/by-puuid/:puuid/by-champion/:championId",
+    GET_TOP_CHAMPIONS: "/lol/champion-mastery/v4/champion-masteries/by-puuid/:puuid/top",
+    GET_CHAMPION_MASTERY_SCORE: "/lol/champion-mastery/v4/scores/by-puuid/:puuid",
   },
   CHAMPION: {
     GET_CHAMPION_ROTATIONS: "/lol/platform/v3/champion-rotations",
@@ -235,8 +230,7 @@ export const METHODS = {
     GET_CHALLENGER_BY_QUEUE: "/lol/league/v4/challengerleagues/by-queue/:queue",
     GET_ENTRIES_BY_PUUID: "/lol/league/v4/entries/by-puuid/:puuid",
     GET_ALL_ENTRIES: "/lol/league/v4/entries/:queue/:tier/:division",
-    GET_GRANDMASTER_BY_QUEUE:
-      "/lol/league/v4/grandmasterleagues/by-queue/:queue",
+    GET_GRANDMASTER_BY_QUEUE: "/lol/league/v4/grandmasterleagues/by-queue/:queue",
     GET_LEAGUE_BY_ID: "/lol/league/v4/leagues/:leagueId",
     GET_MASTER_BY_QUEUE: "/lol/league/v4/masterleagues/by-queue/:queue",
   },
@@ -244,10 +238,8 @@ export const METHODS = {
     GET_CONFIG: "/lol/challenges/v1/challenges/config",
     GET_PERCENTILES: "/lol/challenges/v1/challenges/percentiles",
     GET_CONFIG_BY_ID: "/lol/challenges/v1/challenges/:challengeId/config",
-    GET_LEADERBOARD_BY_ID:
-      "/lol/challenges/v1/challenges/:challengeId/leaderboards/by-level/:level",
-    GET_PERCENTILES_BY_ID:
-      "/lol/challenges/v1/challenges/:challengeId/percentiles",
+    GET_LEADERBOARD_BY_ID: "/lol/challenges/v1/challenges/:challengeId/leaderboards/by-level/:level",
+    GET_PERCENTILES_BY_ID: "/lol/challenges/v1/challenges/:challengeId/percentiles",
     GET_PLAYER_DATA_BY_PUUID: "/lol/challenges/v1/player-data/:puuid",
   },
   LOL_STATUS: {
@@ -280,8 +272,7 @@ export const METHODS = {
     GET_FEATURED_GAMES: "/lol/spectator/tft/v5/featured-games",
   },
   SPECTATOR: {
-    GET_GAME_BY_PUUID:
-      "/lol/spectator/v5/active-games/by-summoner/:puuid",
+    GET_GAME_BY_PUUID: "/lol/spectator/v5/active-games/by-summoner/:puuid",
     GET_FEATURED_GAMES: "/lol/spectator/v5/featured-games",
   },
   SUMMONER: {
@@ -312,8 +303,7 @@ export const METHODS = {
   TOURNAMENT_STUB_V5: {
     POST_CREATE_CODES: "/lol/tournament-stub/v5/codes",
     GET_TOURNAMENT_BY_CODE: "/lol/tournament-stub/v5/codes/:tournamentCode",
-    GET_LOBBY_EVENTS_BY_TOURNAMENT_CODE:
-      "/lol/tournament-stub/v5/lobby-events/by-code/:tournamentCode",
+    GET_LOBBY_EVENTS_BY_TOURNAMENT_CODE: "/lol/tournament-stub/v5/lobby-events/by-code/:tournamentCode",
     POST_CREATE_PROVIDER: "/lol/tournament-stub/v5/providers",
     POST_CREATE_TOURNAMENT: "/lol/tournament-stub/v5/tournaments",
   },
@@ -321,10 +311,8 @@ export const METHODS = {
     POST_CREATE_CODES: "/lol/tournament/v5/codes",
     GET_TOURNAMENT_BY_CODE: "/lol/tournament/v5/codes/:tournamentCode",
     PUT_TOURNAMENT_CODE: "/lol/tournament/v5/codes/:tournamentCode",
-    GET_TOURNAMENT_GAME_DETAILS:
-      "/lol/tournament/v5/games/by-code/:tournamentCode",
-    GET_LOBBY_EVENTS_BY_TOURNAMENT_CODE:
-      "/lol/tournament/v5/lobby-events/by-code/:tournamentCode",
+    GET_TOURNAMENT_GAME_DETAILS: "/lol/tournament/v5/games/by-code/:tournamentCode",
+    GET_LOBBY_EVENTS_BY_TOURNAMENT_CODE: "/lol/tournament/v5/lobby-events/by-code/:tournamentCode",
     POST_CREATE_PROVIDER: "/lol/tournament/v5/providers",
     POST_CREATE_TOURNAMENT: "/lol/tournament/v5/tournaments",
   },
